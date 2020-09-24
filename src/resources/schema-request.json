@@ -1,0 +1,41 @@
+{
+  "required": [
+    "satellites"
+  ],
+  "properties": {
+    "satellites": {
+      "$id": "#/properties/satellites",
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "required": [
+          "name",
+          "distance",
+          "message"
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/satellites/name",
+            "type": "string"
+          },
+          "distance": {
+            "$id": "#/properties/satellites/distance",
+            "type": "number"
+          },
+          "message": {
+            "$id": "#/properties/satellites/message",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "$id": "http://example.org/root.json#",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

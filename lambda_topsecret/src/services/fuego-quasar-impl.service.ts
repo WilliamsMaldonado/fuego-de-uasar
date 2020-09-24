@@ -28,6 +28,7 @@ export class FuegoQuasarImplService implements FuegoQuasarService {
           return resolve(new Response(StatusCodes.OK, { position: position, message: message }));
         })
         .catch((err) => {
+          console.error("ERROR: ", err);
           return resolve(new Response(StatusCodes.NOT_FOUND, { position: position, message: err.message }));
         });
     });
@@ -88,16 +89,16 @@ export class FuegoQuasarImplService implements FuegoQuasarService {
       }
     });
   }
-  
+
   private resolveGap(messages: string[][]): string[][] {
-    const array1:string[][] = [];
+    const array1: string[][] = [];
     const concatAndDeDuplicate = (...arrs: number[]) => [...new Set(arrs)];
     const array = concatAndDeDuplicate(messages[0].length, messages[1].length, messages[2].length);
     const del = Math.max(...array) - Math.min(...array);
     for (let i = 0; i < del; i++) {
-      messages.map(m => {
-        m.length > Math.min(...array) ? m.shift() : m
-      })
+      messages.map((m) => {
+        m.length > Math.min(...array) ? m.shift() : m;
+      });
     }
     return messages;
   }

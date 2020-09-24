@@ -29,10 +29,11 @@ correr `npm install` para instalar las dependencicas del proyeccto
 * [fast-vector](https://github.com/PRNDcompany/fast-vector#readme)
 * [http-status-codes](https://github.com/prettymuchbryce/http-status-codes#readme)
 * [reflect-metadata](https://rbuckton.github.io/reflect-metadata/)
+* [tedis](https://github.com/silkjs/tedis#readme)
 
 ## Build
 
-correr `npm run build` para construir el proyecto. El archivo .zip contiene el proyecto con sus dependencias necesarias en la carpeta `dist/`.
+correr `npm run build` para construir el proyecto. El archivo .zip contiene el proyecto con sus dependencias necesarias en la carpeta `dist/` de cada lambda `lambda_topsecret`, `lambda_topsecret_split`, `lambda_topsecret_get`.
 
 ## Correr pruebas unitarias
 

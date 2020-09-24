@@ -1,0 +1,23 @@
+{
+  "required": [
+    "distance",
+    "message"
+  ],
+  "properties": {
+    "distance": {
+      "$id": "#/properties/satellites/distance",
+      "type": "number"
+    },
+    "message": {
+      "$id": "#/properties/satellites/message",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "$id": "http://example.org/root.json#",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

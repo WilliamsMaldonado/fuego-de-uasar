@@ -26,7 +26,7 @@ export class FuegoQuasarSplitController {
             return resolve(err);
           });
       } catch (error) {
-        return resolve(new Response(StatusCodes.NOT_FOUND, { message: error.message }));
+        return resolve(new Response(StatusCodes.INTERNAL_SERVER_ERROR, { message: error.message }));
       }
     });
   }

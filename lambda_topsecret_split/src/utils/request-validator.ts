@@ -11,7 +11,7 @@ export class RequestValidator {
       const ajv: Ajv.Ajv = new Ajv();
       const isValid: boolean | PromiseLike<any> = ajv.validate(schema, request);
       if (!isValid) {
-        return reject(new Response(StatusCodes.NOT_FOUND, { message: ajv.errorsText() }));
+        return reject(new Response(StatusCodes.INTERNAL_SERVER_ERROR, { message: ajv.errorsText() }));
       }
       return resolve(request);
     });

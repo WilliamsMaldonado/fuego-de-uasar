@@ -26,6 +26,7 @@
   },
   "subPackages": [
     "lambda_topsecret",
-    "lambda_topsecret_split"
+    "lambda_topsecret_split",
+    "lambda_topsecret_get"
   ]
 }

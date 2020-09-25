@@ -12,9 +12,13 @@ export class TedisAdapterImpl implements TedisAdapter {
 
   setKey(key: string, data: satellite): Promise<string> {
     return new Promise((resolve, reject) => {
+      console.log("KEY: ", key, JSON.stringify(data));
       this.tedis
-        .set(key, JSON.stringify(data))
-        .then((res) => resolve(res))
+        .set(key.toLowerCase(), JSON.stringify(data))
+        .then((res) => {
+          console.log("RES: ", res);
+          resolve(res)
+        })
         .catch((err) => reject(err))
         .finally(() => this.tedis.close());
     });

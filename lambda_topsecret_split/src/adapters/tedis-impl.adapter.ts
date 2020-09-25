@@ -17,7 +17,7 @@ export class TedisAdapterImpl implements TedisAdapter {
         .set(key.toLowerCase(), JSON.stringify(data))
         .then((res) => {
           console.log("RES: ", res);
-          resolve(res)
+          resolve(res);
         })
         .catch((err) => reject(err))
         .finally(() => this.tedis.close());
